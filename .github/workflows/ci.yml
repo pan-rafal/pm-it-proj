@@ -20,7 +20,7 @@ jobs:
           pip install -r requirements.txt
       - name: Lint
         run: flake8
+      - name: Add absolute PYTHONPATH
+        run: echo "PYTHONPATH=$(pwd)/src" >> $GITHUB_ENV
       - name: Test
-        env:
-          PYTHONPATH: src
         run: pytest -q
