@@ -20,3 +20,6 @@ Deliver a minimal **Expense Tracker Dashboard** (ETD) that lets a user:
 - record expenses (category, amount, date, note),
 - view a simple summary for the last 30 days,
 - export data as CSV.
+
+## Ważne
+Ten kod nie jest istotny
