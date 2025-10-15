@@ -20,5 +20,7 @@ jobs:
           pip install -r requirements.txt
       - name: Lint
         run: flake8
+      - name: Test2
+        run: ls .
       - name: Tests
         run: PYTHONPATH=../ pytest -q
