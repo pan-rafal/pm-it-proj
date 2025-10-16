@@ -1,0 +1,60 @@
+name: "🧱 Product Backlog Item"
+description: "Create a new Product Backlog Item (user story or feature request)"
+title: "[PBI] <krótki opis funkcji>"
+labels: ["backlog", "pbi", "todo"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: "## 🎯 Cel / Opis"
+  - type: textarea
+    id: description
+    attributes:
+      label: "Opis"
+      description: "Opisz funkcję z perspektywy użytkownika lub celu biznesowego."
+      placeholder: "Jako [typ użytkownika] chcę [funkcja], aby [wartość / korzyść]."
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: "## ✅ Kryteria akceptacji"
+  - type: textarea
+    id: acceptance_criteria
+    attributes:
+      label: "Acceptance Criteria"
+      description: "Wypisz konkretne warunki, które muszą być spełnione, aby uznać PBI za ukończony."
+      placeholder: |
+        - [ ] Użytkownik może dodać nowy wydatek.
+        - [ ] Dane zapisują się poprawnie w pamięci.
+        - [ ] System pokazuje podsumowanie ostatnich 30 dni.
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: "## 🧪 Definition of Done"
+  - type: textarea
+    id: dod
+    attributes:
+      label: "Definition of Done"
+      description: "Standard jakościowy dla zespołu (testy, CI, code review itp.)"
+      placeholder: |
+        - Kod zatwierdzony po code review.
+        - Testy jednostkowe przechodzą.
+        - Pipeline CI zielony.
+        - Dokumentacja zaktualizowana.
+    validations:
+      required: false
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: "Priorytet"
+      options:
+        - P1 - Krytyczne
+        - P2 - Wysokie
+        - P3 - Średnie
+        - P4 - Niskie
+    validations:
+      required: true
