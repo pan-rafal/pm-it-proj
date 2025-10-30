@@ -1,15 +1,48 @@
-**Tytuł:** Krótkie streszczenie zadania  
-
-**Opis:**
-- Co należy zrobić
-- Dlaczego to robimy
-- Zależności lub wymagania techniczne
-
-**Powiązana User Story:** #12  
-**Definition of Done / Kryteria akceptacji:**
-- [ ] Warunek 1
-- [ ] Warunek 2
-- [ ] Warunek 3
-
-**Osoba odpowiedzialna:** @login  
-**Szacowany czas:** 4h
+name: 🧱 Task
+description: Zadanie techniczne powiązane z User Story
+title: "[Task] "
+labels: ["task"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## ⚙️ Task
+        Wypełnij szczegóły zadania technicznego.
+  - type: input
+    id: summary
+    attributes:
+      label: Tytuł zadania
+      placeholder: np. Stworzyć endpoint API do rejestracji użytkownika
+  - type: textarea
+    id: description
+    attributes:
+      label: Opis
+      description: Co dokładnie trzeba zrobić i dlaczego.
+      placeholder: np. Implementacja endpointu POST /register, zapis w bazie danych.
+  - type: input
+    id: related_story
+    attributes:
+      label: 🔗 Powiązana User Story
+      description: Podaj numer historii użytkownika, np. #12
+  - type: textarea
+    id: done
+    attributes:
+      label: ✅ Definition of Done / Kryteria akceptacji
+      value: |
+        - [ ] Warunek 1  
+        - [ ] Warunek 2  
+        - [ ] Warunek 3
+  - type: input
+    id: assignee
+    attributes:
+      label: 👤 Osoba odpowiedzialna
+      placeholder: np. @jan-kowalski
+  - type: dropdown
+    id: estimation
+    attributes:
+      label: ⏱️ Szacowany czas
+      options:
+        - 2h
+        - 4h
+        - 1 dzień
+        - 2 dni
