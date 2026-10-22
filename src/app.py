@@ -1,12 +1,10 @@
 from datetime import datetime, timedelta
-from typing import Dict, List
+from typing import List, Dict
 
 _EXPENSES: List[Dict] = []
 
 
-def add_expense(
-    amount: float, category: str, date: datetime, note: str = ""
-) -> Dict:
+def add_expense(amount: float, category: str, date: datetime, note: str = "") -> Dict:
     if amount <= 0:
         raise ValueError("amount must be > 0")
     item = {
