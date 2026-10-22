@@ -27,4 +27,4 @@ jobs:
       - name: Test2
         run: ls .
       - name: Tests
-        run: PYTHONPATH=src pytest -q
+        run: PYTHONPATH=. pytest -q
