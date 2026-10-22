@@ -1,10 +1,12 @@
-
 from datetime import datetime, timedelta
-from typing import List, Dict
+from typing import Dict, List
 
 _EXPENSES: List[Dict] = []
 
-def add_expense(amount: float, category: str, date: datetime, note: str = "") -> Dict:
+
+def add_expense(
+    amount: float, category: str, date: datetime, note: str = ""
+) -> Dict:
     if amount <= 0:
         raise ValueError("amount must be > 0")
     item = {
@@ -17,8 +19,10 @@ def add_expense(amount: float, category: str, date: datetime, note: str = "") ->
     _EXPENSES.append(item)
     return item
 
+
 def list_expenses() -> List[Dict]:
     return list(_EXPENSES)
+
 
 def summary_last_30_days() -> Dict[str, float]:
     now = datetime.utcnow()
